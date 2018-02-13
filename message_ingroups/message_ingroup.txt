@@ -1,5 +1,5 @@
 def messages_ingroup(groupid, older_than,file_cnt):
-    file_path = '/opt/app/ega/QuestforEasyAll/Group/myquest_for_easy/'
+    file_path = '/opt/app/group_name/'
     if older_than == '':
         url = "https://www.yammer.com/api/v1/messages/in_group/"+groupid+".json?"
         request = Request(url, headers=headers)
