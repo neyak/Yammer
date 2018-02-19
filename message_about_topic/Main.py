@@ -15,5 +15,5 @@ headers = {"Authorization": "Bearer " + access_token}
 
 import csv
 
-#Pass the Group bname as first parameter
-messages_ingroup('XXXXXXXX','',1)
+#extract for a hashtag pass the tag id as first parameter
+messages_abouttopic('XXXXXXX','',1,topicfolder)
