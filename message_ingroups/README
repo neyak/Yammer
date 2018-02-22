@@ -26,3 +26,5 @@ if the flag is false ( which means that there are no more data belonging to the 
 Else we call the same function recursively. 
 
 The Loop continues till the end of extraction. 
+
+The mentioned instructions are pretty much the same for Message from Message in Group API as well. 
