@@ -1,0 +1,20 @@
+When the intent is to extract all the data from a particular group you can invoke the function as specified in the Main.py
+
+Acess :
+The user should have a valid OAut Key, you can generate the Key quite easily in yammer ones you have network admin privilleges. 
+
+Limitations of Yammer :
+Its important to inderstand the limitations of yammer API's response. Yammer would not respond more than 20 messages per request. 
+Yammer Time out period has to be respected as well. More the number of request with in the time period mention will result in Errors. 
+
+Parameters of the function :
+
+groupid
+Older_than
+file_cnt
+
+What does the function Do :
+Invokes the REST-API : Message_AboutTopic and downloads all the data beloging to a particular Yammer group.
+
+
+
