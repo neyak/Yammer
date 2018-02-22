@@ -1,0 +1,30 @@
+When the intent is to extract all the data from a particular Topic(#tag) you can invoke the function as specified in the Main.py
+
+Acess :
+The user should have a valid OAut Key, you can generate the Key quite easily in yammer ones you have network admin privilleges. 
+
+Limitations of Yammer :
+Its important to inderstand the limitations of yammer API's response. Yammer would not respond more than 20 messages per request. 
+Yammer Time out period has to be respected as well. More the number of request with in the time period mention will result in Errors. 
+
+Parameters of the function :
+
+groupid : Pass on Topic id of yammer 
+Older_than : Should always be  ''
+file_cnt : Pass 1
+
+Output :
+
+The function would out data in a set of json files in the folder mentioned within the function. 
+ex : ( 1.json, 2.json, 3.json. etc.. ) 
+
+What does the function Do :
+Invokes the REST-API : Message_AboutTopic and downloads all the data beloging to a particular Topic.  
+
+The First section gets invoked when the older than '' , which means the first iteration , after the first file 1.json is craeted the code looks for the flag ( older_than) in the metadata
+if the flag is false ( which means that there are no more data belonging to the Topic ( #tag ) the loop would finish gracefully. 
+Else we call the same function recursively. 
+
+The Loop continues till the end of extraction. 
+
+The mentioned instructions are pretty much the same for Message from Message in Group API as well. 
