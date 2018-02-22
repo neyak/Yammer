@@ -9,12 +9,20 @@ Yammer Time out period has to be respected as well. More the number of request w
 
 Parameters of the function :
 
-groupid
-Older_than
-file_cnt
+groupid : Pass on group id of yammer 
+Older_than : Should always be  ''
+file_cnt : Pass 1
+
+Output :
+
+The function would out data in a set of json files in the folder mentioned within the function. 
+ex : ( 1.json, 2.json, 3.json. etc.. ) 
 
 What does the function Do :
-Invokes the REST-API : Message_AboutTopic and downloads all the data beloging to a particular Yammer group.
+Invokes the REST-API : Message_AboutTopic and downloads all the data beloging to a particular Yammer group.  
 
+The First section gets invoked when the older than '' , which means the first iteration , after the first file 1.json is craeted the code looks for the flag ( older_than) in the metadata
+if the flag is false ( which means that there are no more data belonging to the group ) the loop would finish gracefully. 
+Else we call the same function recursively. 
 
-
+The Loop continues till the end of extraction. 
